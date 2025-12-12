@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Sample Website</title>
+  <link rel="stylesheet" href="css\style.css">
+  <script src="js/script.js"></script> 
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Contact.html">Contact</a>
+	  <a href="reg_std.html">Student Registration</a>
+	  <a href="reg_teacher.html">Teacher Registration</a>
+    </nav>
+  </header>
+  <main>
+        <section id="registration">
+    <h2>Teacher Registration</h2>
+    <form id="teacherRegistrationForm">
+
+        <fieldset>
+            <legend>Personal Details</legend>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Gender:</label><br>
+                <input type="radio" id="gender_male" name="gender" value="male" required>
+                <label for="gender_male" class="inline-label">Male</label>
+                
+                <input type="radio" id="gender_female" name="gender" value="female">
+                <label for="gender_female" class="inline-label">Female</label>
+                
+                <input type="radio" id="gender_other" name="gender" value="other">
+                <label for="gender_other" class="inline-label">Other</label>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Professional and Academic Details</legend>
+            <div class="form-group">
+                <label for="subject">Primary Subject:</label>
+                <input type="text" id="subject" name="subject">
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Years of Experience:</label>
+                <select id="experience" name="experience" required>
+                    <option value="">-- Select Level --</option>
+                    <option value="0-2">0 - 2 Years</option>
+                    <option value="3-5">3 - 5 Years</option>
+                    <option value="6-10">6 - 10 Years</option>
+                    <option value="10+">10+ Years</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Hobbies (Select all that apply):</label><br>
+                <input type="checkbox" id="hobby_reading" name="hobbies" value="reading">
+                <label for="hobby_reading" class="inline-label">Reading</label>
+                
+                <input type="checkbox" id="hobby_travel" name="hobbies" value="travel">
+                <label for="hobby_travel" class="inline-label">Traveling</label>
+                
+                <input type="checkbox" id="hobby_sports" name="hobbies" value="sports">
+                <label for="hobby_sports" class="inline-label">Sports</label>
+                
+                <input type="checkbox" id="hobby_tech" name="hobbies" value="tech">
+                <label for="hobby_tech" class="inline-label">Coding/Tech</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Documents & Picture</legend>
+
+            <div class="form-group">
+                <label for="profile_pic">Upload Profile Picture:</label>
+                <input type="file" id="profile_pic" name="profile_pic" accept="image/*" onchange="displayImage(this)">
+            </div>
+            <div class="form-group image-preview">
+                <img id="uploaded_image_display" src="#" alt="Uploaded Profile Image" style="display:none; max-width:150px; border: 1px solid #ccc; margin-top: 10px;">
+            </div>
+            
+            <div class="form-group">
+                <label for="cv_upload">Upload CV/Resume (.pdf, .doc):</label>
+                <input type="file" id="cv_upload" name="cv_upload" accept=".pdf,.doc,.docx">
+            </div>
+        </fieldset>
+
+        <div class="form-actions">
+            <button type="submit" onclick="handleSubmit(event)">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</section>
+    </main>
+  <footer>
+    <p>&copy; 2025 My Sample Website</p>
+  </footer>
+</body>
+</html>

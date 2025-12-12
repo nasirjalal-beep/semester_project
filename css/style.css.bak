@@ -1,0 +1,21 @@
+/* CSS to align radio buttons/checkboxes and their labels */
+.form-group label.inline-label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal; /* Don't make inline labels bold */
+}
+
+/* Style for the select (dropdown) element */
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for file inputs (to match other fields) */
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 8px 0; /* Less padding for file input */
+}
